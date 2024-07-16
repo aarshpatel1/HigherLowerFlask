@@ -14,10 +14,9 @@ random_number = random.randint(0, 9)
 print(random_number)
 
 
-@app.route("/<number>")
+@app.route("/<int:number>")
 def match_the_number(number):
-    global random_number
-    number = int(number)
+    print(random_number)
     if number == random_number:
         return ("<h1 style='color: green'>You found me! 🙂<h1>"
                 "<img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWgyMnVqd2pxZnphZzc4djEwMGg1NzV2cD"
